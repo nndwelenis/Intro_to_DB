@@ -46,9 +46,9 @@ def create_database():
         # 5) Required success message
         print("Database 'alx_book_store' created successfully!")
 
-    except Error as err:
-        # Print error message to handle errors when failing to connect or execute SQL
+    except mysql.connector.Error as err:
         print(f"Error: {err}")
+
 
     finally:
         # Always close cursor and connection to avoid resource leaks
